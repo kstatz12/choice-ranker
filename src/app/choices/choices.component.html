@@ -1,0 +1,12 @@
+<ul>
+    <li *ngFor="let c of cacheService.choices$ | async">
+        {{c.name}}
+     </li>
+</ul>
+
+<div>
+    <label>
+        <input [(ngModel)]="newChoiceName" (keyup.enter)="addChoice()"/>
+    </label>
+</div>
+<button [routerLink]="'/chooser-component'"> Button Label</button>
